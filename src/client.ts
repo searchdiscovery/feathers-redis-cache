@@ -33,6 +33,8 @@ export default (options: any = {}) => {
 
       app.set('redisClient', client);
 
+      console.log("THis is a thing here yay");
+
       client.on('ready', () => {
         app.set('redisClient', client);
 

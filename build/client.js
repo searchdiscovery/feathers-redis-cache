@@ -36,6 +36,7 @@ exports.default = (function (options) {
                 } });
             var client_1 = redis_1.default.createClient(redisOptions);
             app.set('redisClient', client_1);
+            console.log("THis is a thing here yay");
             client_1.on('ready', function () {
                 app.set('redisClient', client_1);
                 console.log(chalk_1.default.green('[redis]') + " connected");
