@@ -2,7 +2,7 @@
 import redis from 'redis';
 import chalk from 'chalk';
 
-const { DISABLE_REDIS_CACHE } = process.env;
+const DISABLE_REDIS_CACHE = process.env.DISABLE_REDIS_CACHE === 'true' || process.env.DISABLE_REDIS_CACHE === '1'
 const defaultPrefix = 'frc_';
 
 export default (options: any = {}) => {

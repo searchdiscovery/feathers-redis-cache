@@ -16,7 +16,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var redis_1 = __importDefault(require("redis"));
 var chalk_1 = __importDefault(require("chalk"));
-var DISABLE_REDIS_CACHE = process.env.DISABLE_REDIS_CACHE;
+var DISABLE_REDIS_CACHE = process.env.DISABLE_REDIS_CACHE === 'true' || process.env.DISABLE_REDIS_CACHE === '1';
 var defaultPrefix = 'frc_';
 exports.default = (function (options) {
     if (options === void 0) { options = {}; }
